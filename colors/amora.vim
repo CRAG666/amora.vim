@@ -215,8 +215,8 @@ call amora#highlight('String', s:palette.yellow, s:palette.none)
 call amora#highlight('Character', s:palette.yellow, s:palette.none)
 call amora#highlight('Number', s:palette.purple, s:palette.none)
 call amora#highlight('Float', s:palette.purple, s:palette.none)
-call amora#highlight('Function', s:palette.green, s:palette.none)
-call amora#highlight('Operator', s:palette.red, s:palette.none)
+call amora#highlight('Function', s:palette.red, s:palette.none)
+call amora#highlight('Operator', s:palette.green, s:palette.none)
 call amora#highlight('Title', s:palette.red, s:palette.none, 'bold')
 call amora#highlight('Tag', s:palette.orange, s:palette.none)
 call amora#highlight('Delimiter', s:palette.fg, s:palette.none)
@@ -300,7 +300,7 @@ call amora#highlight('WarningFloat', s:palette.yellow, s:palette.bg2)
 call amora#highlight('InfoFloat', s:palette.blue, s:palette.bg2)
 call amora#highlight('HintFloat', s:palette.green, s:palette.bg2)
 if &diff
-  call amora#highlight('CurrentWord', s:palette.bg0, s:palette.green)
+  call amora#highlight('CurrentWord', s:palette.bg0, s:palette.purple)
 elseif s:configuration.current_word ==# 'grey background'
   call amora#highlight('CurrentWord', s:palette.none, s:palette.bg2)
 else
@@ -365,19 +365,19 @@ highlight! link TSConditional Red
 highlight! link TSConstBuiltin OrangeItalic
 highlight! link TSConstMacro OrangeItalic
 highlight! link TSConstant OrangeItalic
-highlight! link TSConstructor Green
+highlight! link TSConstructor PurpleItalic
 highlight! link TSException Red
-highlight! link TSField Green
+highlight! link TSField PurpleItalic
 highlight! link TSFloat Purple
-highlight! link TSFuncBuiltin Green
-highlight! link TSFuncMacro Green
-highlight! link TSFunction Green
+highlight! link TSFuncBuiltin PurpleItalic
+highlight! link TSFuncMacro PurpleItalic
+highlight! link TSFunction PurpleItalic
 highlight! link TSInclude Red
 highlight! link TSKeyword Red
 highlight! link TSKeywordFunction Red
 highlight! link TSKeywordOperator Red
 highlight! link TSLabel Red
-highlight! link TSMethod Green
+highlight! link TSMethod PurpleItalic
 highlight! link TSNamespace BlueItalic
 highlight! link TSNone Fg
 highlight! link TSNumber Purple
@@ -390,13 +390,13 @@ highlight! link TSPunctDelimiter Grey
 highlight! link TSPunctSpecial Yellow
 highlight! link TSRepeat Red
 highlight! link TSString Yellow
-highlight! link TSStringEscape Green
-highlight! link TSStringRegex Green
+highlight! link TSStringEscape PurpleItalic
+highlight! link TSStringRegex PurpleItalic
 highlight! link TSStructure OrangeItalic
 highlight! link TSSymbol Fg
 highlight! link TSTag BlueItalic
 highlight! link TSTagDelimiter Red
-highlight! link TSText Green
+highlight! link TSText PurpleItalic
 highlight! link TSStrike Grey
 highlight! link TSMath Yellow
 highlight! link TSType BlueItalic
@@ -859,13 +859,13 @@ highlight! link LspSagaRenameBorder Blue
 highlight! link LspSagaRenamePromptPrefix Red
 highlight! link LspSagaCodeActionBorder Blue
 highlight! link LspSagaCodeActionTruncateLine Blue
-highlight! link LspSagaCodeActionContent Green
-highlight! link LspSagaHoverBorder Green
-highlight! link LspSagaDocTruncateLine Green
-highlight! link LspSagaSignatureHelpBorder Green
-highlight! link LspSagaShTruncateLine Green
-highlight! link LspSagaDefPreviewBorder Purple
-highlight! link DefinitionIcon Purple
+highlight! link LspSagaCodeActionContent Purple
+highlight! link LspSagaHoverBorder Purple
+highlight! link LspSagaDocTruncateLine Purple
+highlight! link LspSagaSignatureHelpBorder Purple
+highlight! link LspSagaShTruncateLine Purple
+highlight! link LspSagaDefPreviewBorder Green
+highlight! link DefinitionIcon Green
 highlight! link LspLinesDiagBorder Yellow
 highlight! link LineDiagTuncateLine Yellow
 highlight! link LspSagaAutoPreview Blue
@@ -931,18 +931,18 @@ highlight! link plugEdge Purple
 " https://github.com/neoclide/coc.nvim
 highlight! link CocTreeOpenClose Purple
 highlight! link CocTreeDescription Grey
-highlight! link CocSymbolFile Green
-highlight! link CocSymbolModule Red
-highlight! link CocSymbolNamespace Red
-highlight! link CocSymbolPackage Red
+highlight! link CocSymbolFile Red
+highlight! link CocSymbolModule Green
+highlight! link CocSymbolNamespace Green
+highlight! link CocSymbolPackage Green
 highlight! link CocSymbolClass Blue
-highlight! link CocSymbolMethod Green
+highlight! link CocSymbolMethod Red
 highlight! link CocSymbolProperty Orange
-highlight! link CocSymbolField Green
-highlight! link CocSymbolConstructor Green
+highlight! link CocSymbolField Red
+highlight! link CocSymbolConstructor Red
 highlight! link CocSymbolEnum Blue
 highlight! link CocSymbolInterface Blue
-highlight! link CocSymbolFunction Green
+highlight! link CocSymbolFunction Red
 highlight! link CocSymbolVariable Orange
 highlight! link CocSymbolConstant Orange
 highlight! link CocSymbolString Yellow
@@ -950,7 +950,7 @@ highlight! link CocSymbolNumber Yellow
 highlight! link CocSymbolBoolean Yellow
 highlight! link CocSymbolArray Yellow
 highlight! link CocSymbolObject Yellow
-highlight! link CocSymbolKey Red
+highlight! link CocSymbolKey Green
 highlight! link CocSymbolNull Yellow
 highlight! link CocSymbolEnumMember Orange
 highlight! link CocSymbolStruct Blue
@@ -969,19 +969,19 @@ highlight! link CocExplorerBufferReadonly Red
 highlight! link CocExplorerBufferBufname Grey
 highlight! link CocExplorerBufferFullpath Grey
 highlight! link CocExplorerFileRoot Red
-highlight! link CocExplorerFileRootName Green
+highlight! link CocExplorerFileRootName Purple
 highlight! link CocExplorerFileExpandIcon Blue
 highlight! link CocExplorerFileFullpath Grey
-highlight! link CocExplorerFileDirectory Green
-highlight! link CocExplorerFileGitStaged Purple
+highlight! link CocExplorerFileDirectory Purple
+highlight! link CocExplorerFileGitStaged Green
 highlight! link CocExplorerFileGitUnstaged Yellow
-highlight! link CocExplorerFileGitRootStaged Purple
+highlight! link CocExplorerFileGitRootStaged Green
 highlight! link CocExplorerFileGitRootUnstaged Yellow
 highlight! link CocExplorerGitPathChange Fg
 highlight! link CocExplorerGitContentChange Fg
-highlight! link CocExplorerGitRenamed Purple
+highlight! link CocExplorerGitRenamed Green
 highlight! link CocExplorerGitCopied Fg
-highlight! link CocExplorerGitAdded Green
+highlight! link CocExplorerGitAdded Purple
 highlight! link CocExplorerGitUntracked Blue
 highlight! link CocExplorerGitUnmodified Fg
 highlight! link CocExplorerGitUnmerged Orange
@@ -990,11 +990,11 @@ highlight! link CocExplorerGitModified Yellow
 highlight! link CocExplorerGitDeleted Red
 highlight! link CocExplorerGitIgnored Grey
 highlight! link CocExplorerFileSize Blue
-highlight! link CocExplorerTimeAccessed Purple
-highlight! link CocExplorerTimeCreated Purple
-highlight! link CocExplorerTimeModified Purple
+highlight! link CocExplorerTimeAccessed Green
+highlight! link CocExplorerTimeCreated Green
+highlight! link CocExplorerTimeModified Green
 highlight! link CocExplorerFileRootName Orange
-highlight! link CocExplorerBufferNameVisible Green
+highlight! link CocExplorerBufferNameVisible Purple
 highlight! link CocExplorerIndentLine Conceal
 highlight! link CocExplorerHelpDescription Grey
 highlight! link CocExplorerHelpHint Grey
@@ -1005,7 +1005,7 @@ highlight! link CocExplorerFileHidden Grey
 " syn_begin: tagbar {{{
 " https://github.com/majutsushi/tagbar
 highlight! link TagbarFoldIcon Blue
-highlight! link TagbarSignature Green
+highlight! link TagbarSignature Purple
 highlight! link TagbarKind Red
 highlight! link TagbarScope Orange
 highlight! link TagbarNestedKind Blue
@@ -1017,29 +1017,29 @@ highlight! link TagbarVisibilityPublic Blue
 highlight! link VistaBracket Grey
 highlight! link VistaChildrenNr Orange
 highlight! link VistaScope Red
-highlight! link VistaTag Green
+highlight! link VistaTag Purple
 highlight! link VistaPrefix Grey
 highlight! link VistaIcon Blue
 highlight! link VistaScopeKind Yellow
 highlight! link VistaColon Grey
 highlight! link VistaLineNr Grey
 highlight! link VistaHeadNr Fg
-highlight! link VistaPublic Green
+highlight! link VistaPublic Purple
 highlight! link VistaProtected Yellow
 highlight! link VistaPrivate Red
 " syn_end }}}
 " syn_begin: nerdtree {{{
 " https://github.com/preservim/nerdtree
-highlight! link NERDTreeDir Green
-highlight! link NERDTreeDirSlash Green
+highlight! link NERDTreeDir Purple
+highlight! link NERDTreeDirSlash Purple
 highlight! link NERDTreeOpenable Blue
 highlight! link NERDTreeClosable Blue
 highlight! link NERDTreeFile Fg
 highlight! link NERDTreeExecFile Red
 highlight! link NERDTreeUp Grey
-highlight! link NERDTreeCWD Purple
+highlight! link NERDTreeCWD Green
 highlight! link NERDTreeHelp Grey
-highlight! link NERDTreeToggleOn Green
+highlight! link NERDTreeToggleOn Purple
 highlight! link NERDTreeToggleOff Red
 highlight! link NERDTreeFlags Blue
 highlight! link NERDTreeLinkFile Grey
@@ -1053,11 +1053,11 @@ highlight! link DirvishArg Yellow
 " syn_begin: NvimTree {{{
 " https://github.com/kyazdani42/nvim-tree.lua
 highlight! link NvimTreeSymlink Fg
-highlight! link NvimTreeFolderName Green
+highlight! link NvimTreeFolderName Purple
 highlight! link NvimTreeRootFolder Grey
 highlight! link NvimTreeFolderIcon Blue
-highlight! link NvimTreeEmptyFolderName Green
-highlight! link NvimTreeOpenedFolderName Green
+highlight! link NvimTreeEmptyFolderName Purple
+highlight! link NvimTreeOpenedFolderName Purple
 highlight! link NvimTreeExecFile Fg
 highlight! link NvimTreeOpenedFile Fg
 highlight! link NvimTreeSpecialFile Fg
@@ -1067,7 +1067,7 @@ highlight! link NvimTreeIndentMarker Grey
 highlight! link NvimTreeGitDirty Yellow
 highlight! link NvimTreeGitStaged Blue
 highlight! link NvimTreeGitMerge Orange
-highlight! link NvimTreeGitRenamed Purple
+highlight! link NvimTreeGitRenamed Green
 highlight! link NvimTreeGitNew Green
 highlight! link NvimTreeGitDeleted Red
 highlight! link NvimTreeLspDiagnosticsError RedSign
@@ -1090,8 +1090,8 @@ highlight! link FernWindowSelectStatusLine TabLine
 " syn_end }}}
 " syn_begin: netrw {{{
 " https://www.vim.org/scripts/script.php?script_id=1075
-highlight! link netrwDir Green
-highlight! link netrwClassify Green
+highlight! link netrwDir Purple
+highlight! link netrwClassify Purple
 highlight! link netrwLink Grey
 highlight! link netrwSymLink Fg
 highlight! link netrwExe Red
@@ -1099,28 +1099,28 @@ highlight! link netrwComment Grey
 highlight! link netrwList Yellow
 highlight! link netrwHelpCmd Blue
 highlight! link netrwCmdSep Grey
-highlight! link netrwVersion Purple
+highlight! link netrwVersion Green
 " syn_end }}}
 " syn_begin: startify/quickmenu {{{
 " https://github.com/mhinz/vim-startify
 " https://github.com/skywind3000/quickmenu.vim
 highlight! link StartifyBracket Grey
-highlight! link StartifyFile Green
+highlight! link StartifyFile Purple
 highlight! link StartifyNumber Red
 highlight! link StartifyPath Grey
 highlight! link StartifySlash Grey
 highlight! link StartifySection Blue
-highlight! link StartifyHeader Purple
+highlight! link StartifyHeader Green
 highlight! link StartifySpecial Grey
 " syn_end }}}
 " syn_begin: quickmenu {{{
 " https://github.com/skywind3000/quickmenu.vim
-highlight! link QuickmenuOption Green
+highlight! link QuickmenuOption Purple
 highlight! link QuickmenuNumber Orange
 highlight! link QuickmenuBracket Grey
 highlight! link QuickmenuHelp Blue
 highlight! link QuickmenuSpecial Grey
-highlight! link QuickmenuHeader Purple
+highlight! link QuickmenuHeader Green
 " syn_end }}}
 " syn_begin: undotree {{{
 " https://github.com/mbbill/undotree
@@ -1214,12 +1214,12 @@ call amora#highlight('VimwikiBold', s:palette.none, s:palette.none, 'bold')
 call amora#highlight('VimwikiUnderline', s:palette.none, s:palette.none, 'underline')
 highlight! link VimwikiList Red
 highlight! link VimwikiTag Blue
-highlight! link VimwikiCode Green
+highlight! link VimwikiCode Purple
 highlight! link VimwikiHR Yellow
 highlight! link VimwikiHeaderChar Grey
 highlight! link VimwikiMarkers Grey
-highlight! link VimwikiPre Green
-highlight! link VimwikiPreDelim Green
+highlight! link VimwikiPre Purple
+highlight! link VimwikiPreDelim Purple
 highlight! link VimwikiNoExistsLink Red
 " syn_end }}}
 " syn_begin: rst {{{
@@ -1230,11 +1230,11 @@ call amora#highlight('rstStrongEmphasis', s:palette.none, s:palette.none, 'bold'
 call amora#highlight('rstStandaloneHyperlink', s:palette.blue, s:palette.none, 'underline')
 call amora#highlight('rstHyperlinkTarget', s:palette.blue, s:palette.none, 'underline')
 highlight! link rstSubstitutionReference Blue
-highlight! link rstInterpretedTextOrHyperlinkReference Green
+highlight! link rstInterpretedTextOrHyperlinkReference Purple
 highlight! link rstTableLines Grey
-highlight! link rstInlineLiteral Green
-highlight! link rstLiteralBlock Green
-highlight! link rstQuotedLiteralBlock Green
+highlight! link rstInlineLiteral Purple
+highlight! link rstLiteralBlock Purple
+highlight! link rstQuotedLiteralBlock Purple
 " }}}
 " syn_end }}}
 " syn_begin: tex {{{
@@ -1245,13 +1245,13 @@ highlight! link texDefName Yellow
 highlight! link texNewCmd Orange
 highlight! link texCmdName Blue
 highlight! link texBeginEnd Red
-highlight! link texBeginEndName Green
+highlight! link texBeginEndName Purple
 highlight! link texDocType RedItalic
 highlight! link texDocTypeArgs Orange
-highlight! link texInputFile Green
+highlight! link texInputFile Purple
 " }}}
 " vimtex: https://github.com/lervag/vimtex {{{
-highlight! link texFileArg Green
+highlight! link texFileArg Purple
 highlight! link texCmd BlueItalic
 highlight! link texCmdPackage BlueItalic
 highlight! link texCmdDef Red
@@ -1262,7 +1262,7 @@ highlight! link texCmdTitle Red
 highlight! link texCmdAuthor Red
 highlight! link texCmdEnv Red
 highlight! link texCmdPart Red
-highlight! link texEnvArgName Green
+highlight! link texEnvArgName Purple
 " }}}
 " syn_end }}}
 " syn_begin: html/markdown/javascriptreact/typescriptreact {{{
@@ -1281,14 +1281,14 @@ call amora#highlight('htmlBoldUnderlineItalic', s:palette.none, s:palette.none, 
 call amora#highlight('htmlUnderline', s:palette.none, s:palette.none, 'underline')
 call amora#highlight('htmlUnderlineItalic', s:palette.none, s:palette.none, 'underline,italic')
 call amora#highlight('htmlItalic', s:palette.none, s:palette.none, 'italic')
-highlight! link htmlTag Green
+highlight! link htmlTag Red
 highlight! link htmlEndTag Blue
 highlight! link htmlTagN RedItalic
 highlight! link htmlTagName RedItalic
 highlight! link htmlArg Blue
 highlight! link htmlScriptTag Purple
 highlight! link htmlSpecialTagName RedItalic
-highlight! link htmlString Green
+highlight! link htmlString Red
 " }}}
 " syn_end }}}
 " syn_begin: htmldjango {{{
@@ -1298,47 +1298,47 @@ highlight! link djangoTagBlock Yellow
 " syn_end }}}
 " syn_begin: xml {{{
 " builtin: https://github.com/chrisbra/vim-xml-ftplugin{{{
-highlight! link xmlTag Green
+highlight! link xmlTag Red
 highlight! link xmlEndTag Blue
 highlight! link xmlTagName RedItalic
 highlight! link xmlEqual Orange
 highlight! link xmlAttrib Blue
-highlight! link xmlEntity Red
-highlight! link xmlEntityPunct Red
+highlight! link xmlEntity Green
+highlight! link xmlEntityPunct Green
 highlight! link xmlDocTypeDecl Grey
 highlight! link xmlDocTypeKeyword RedItalic
 highlight! link xmlCdataStart Grey
 highlight! link xmlCdataCdata Purple
-highlight! link xmlString Green
+highlight! link xmlString Red
 " }}}
 " syn_end }}}
 " syn_begin: css/scss/sass/less {{{
 " builtin: https://github.com/JulesWang/css.vim{{{
-highlight! link cssStringQ Green
-highlight! link cssStringQQ Green
+highlight! link cssStringQ Red
+highlight! link cssStringQQ Red
 highlight! link cssAttrComma Grey
 highlight! link cssBraces Grey
 highlight! link cssTagName Purple
 highlight! link cssClassNameDot Grey
-highlight! link cssClassName Red
+highlight! link cssClassName Green
 highlight! link cssFunctionName Orange
-highlight! link cssAttr Green
-highlight! link cssCommonAttr Green
+highlight! link cssAttr Red
+highlight! link cssCommonAttr Red
 highlight! link cssProp Blue
 highlight! link cssPseudoClassId Yellow
-highlight! link cssPseudoClassFn Green
+highlight! link cssPseudoClassFn Red
 highlight! link cssPseudoClass Yellow
-highlight! link cssImportant Red
+highlight! link cssImportant Green
 highlight! link cssSelectorOp Orange
 highlight! link cssSelectorOp2 Orange
-highlight! link cssColor Green
-highlight! link cssUnitDecorators Green
-highlight! link cssValueLength Green
-highlight! link cssValueInteger Green
-highlight! link cssValueNumber Green
-highlight! link cssValueAngle Green
-highlight! link cssValueTime Green
-highlight! link cssValueFrequency Green
+highlight! link cssColor Red
+highlight! link cssUnitDecorators Red
+highlight! link cssValueLength Red
+highlight! link cssValueInteger Red
+highlight! link cssValueNumber Red
+highlight! link cssValueAngle Red
+highlight! link cssValueTime Red
+highlight! link cssValueFrequency Red
 highlight! link cssVendor Grey
 highlight! link cssNoise Grey
 " }}}
@@ -1429,9 +1429,9 @@ highlight! link javascriptFuncArg Fg
 highlight! link javascriptObjectLiteral Green
 highlight! link javascriptIdentifier OrangeItalic
 highlight! link javascriptArrowFunc Red
-highlight! link javascriptTemplate Purple
-highlight! link javascriptTemplateSubstitution Purple
-highlight! link javascriptTemplateSB Purple
+highlight! link javascriptTemplate Green
+highlight! link javascriptTemplateSubstitution Green
+highlight! link javascriptTemplateSB Green
 highlight! link javascriptNodeGlobal BlueItalic
 highlight! link javascriptDocTags RedItalic
 highlight! link javascriptDocNotation Blue
@@ -1441,7 +1441,7 @@ highlight! link javascriptClassSuperName BlueItalic
 highlight! link javascriptOperator Red
 highlight! link javascriptBrackets Fg
 highlight! link javascriptBraces Fg
-highlight! link javascriptLabel Purple
+highlight! link javascriptLabel Green
 highlight! link javascriptEndColons Grey
 highlight! link javascriptObjectLabelColon Grey
 highlight! link javascriptDotNotation Grey
@@ -1457,66 +1457,66 @@ highlight! link javascriptGlobalRegExpDot Grey
 highlight! link javascriptGlobalStringDot Grey
 highlight! link javascriptGlobalSymbolDot Grey
 highlight! link javascriptGlobalURLDot Grey
-highlight! link javascriptMethod Green
-highlight! link javascriptMethodName Green
-highlight! link javascriptObjectMethodName Green
-highlight! link javascriptGlobalMethod Green
-highlight! link javascriptDOMStorageMethod Green
-highlight! link javascriptFileMethod Green
-highlight! link javascriptFileReaderMethod Green
-highlight! link javascriptFileListMethod Green
-highlight! link javascriptBlobMethod Green
-highlight! link javascriptURLStaticMethod Green
-highlight! link javascriptNumberStaticMethod Green
-highlight! link javascriptNumberMethod Green
-highlight! link javascriptDOMNodeMethod Green
-highlight! link javascriptES6BigIntStaticMethod Green
-highlight! link javascriptBOMWindowMethod Green
-highlight! link javascriptHeadersMethod Green
-highlight! link javascriptRequestMethod Green
-highlight! link javascriptResponseMethod Green
-highlight! link javascriptES6SetMethod Green
-highlight! link javascriptReflectMethod Green
-highlight! link javascriptPaymentMethod Green
-highlight! link javascriptPaymentResponseMethod Green
-highlight! link javascriptTypedArrayStaticMethod Green
-highlight! link javascriptGeolocationMethod Green
-highlight! link javascriptES6MapMethod Green
-highlight! link javascriptServiceWorkerMethod Green
-highlight! link javascriptCacheMethod Green
-highlight! link javascriptFunctionMethod Green
-highlight! link javascriptXHRMethod Green
-highlight! link javascriptBOMNavigatorMethod Green
-highlight! link javascriptServiceWorkerMethod Green
-highlight! link javascriptDOMEventTargetMethod Green
-highlight! link javascriptDOMEventMethod Green
-highlight! link javascriptIntlMethod Green
-highlight! link javascriptDOMDocMethod Green
-highlight! link javascriptStringStaticMethod Green
-highlight! link javascriptStringMethod Green
-highlight! link javascriptSymbolStaticMethod Green
-highlight! link javascriptRegExpMethod Green
-highlight! link javascriptObjectStaticMethod Green
-highlight! link javascriptObjectMethod Green
-highlight! link javascriptBOMLocationMethod Green
-highlight! link javascriptJSONStaticMethod Green
-highlight! link javascriptGeneratorMethod Green
-highlight! link javascriptEncodingMethod Green
-highlight! link javascriptPromiseStaticMethod Green
-highlight! link javascriptPromiseMethod Green
-highlight! link javascriptBOMHistoryMethod Green
-highlight! link javascriptDOMFormMethod Green
-highlight! link javascriptClipboardMethod Green
-highlight! link javascriptTypedArrayStaticMethod Green
-highlight! link javascriptBroadcastMethod Green
-highlight! link javascriptDateStaticMethod Green
-highlight! link javascriptDateMethod Green
-highlight! link javascriptConsoleMethod Green
-highlight! link javascriptArrayStaticMethod Green
-highlight! link javascriptArrayMethod Green
-highlight! link javascriptMathStaticMethod Green
-highlight! link javascriptSubtleCryptoMethod Green
-highlight! link javascriptCryptoMethod Green
+highlight! link javascriptMethod Purple
+highlight! link javascriptMethodName Purple
+highlight! link javascriptObjectMethodName Purple
+highlight! link javascriptGlobalMethod Purple
+highlight! link javascriptDOMStorageMethod Purple
+highlight! link javascriptFileMethod Purple
+highlight! link javascriptFileReaderMethod Purple
+highlight! link javascriptFileListMethod Purple
+highlight! link javascriptBlobMethod Purple
+highlight! link javascriptURLStaticMethod Purple
+highlight! link javascriptNumberStaticMethod Purple
+highlight! link javascriptNumberMethod Purple
+highlight! link javascriptDOMNodeMethod Purple
+highlight! link javascriptES6BigIntStaticMethod Purple
+highlight! link javascriptBOMWindowMethod Purple
+highlight! link javascriptHeadersMethod Purple
+highlight! link javascriptRequestMethod Purple
+highlight! link javascriptResponseMethod Purple
+highlight! link javascriptES6SetMethod Purple
+highlight! link javascriptReflectMethod Purple
+highlight! link javascriptPaymentMethod Purple
+highlight! link javascriptPaymentResponseMethod Purple
+highlight! link javascriptTypedArrayStaticMethod Purple
+highlight! link javascriptGeolocationMethod Purple
+highlight! link javascriptES6MapMethod Purple
+highlight! link javascriptServiceWorkerMethod Purple
+highlight! link javascriptCacheMethod Purple
+highlight! link javascriptFunctionMethod Purple
+highlight! link javascriptXHRMethod Purple
+highlight! link javascriptBOMNavigatorMethod Purple
+highlight! link javascriptServiceWorkerMethod Purple
+highlight! link javascriptDOMEventTargetMethod Purple
+highlight! link javascriptDOMEventMethod Purple
+highlight! link javascriptIntlMethod Purple
+highlight! link javascriptDOMDocMethod Purple
+highlight! link javascriptStringStaticMethod Purple
+highlight! link javascriptStringMethod Purple
+highlight! link javascriptSymbolStaticMethod Purple
+highlight! link javascriptRegExpMethod Purple
+highlight! link javascriptObjectStaticMethod Purple
+highlight! link javascriptObjectMethod Purple
+highlight! link javascriptBOMLocationMethod Purple
+highlight! link javascriptJSONStaticMethod Purple
+highlight! link javascriptGeneratorMethod Purple
+highlight! link javascriptEncodingMethod Purple
+highlight! link javascriptPromiseStaticMethod Purple
+highlight! link javascriptPromiseMethod Purple
+highlight! link javascriptBOMHistoryMethod Purple
+highlight! link javascriptDOMFormMethod Purple
+highlight! link javascriptClipboardMethod Purple
+highlight! link javascriptTypedArrayStaticMethod Purple
+highlight! link javascriptBroadcastMethod Purple
+highlight! link javascriptDateStaticMethod Purple
+highlight! link javascriptDateMethod Purple
+highlight! link javascriptConsoleMethod Purple
+highlight! link javascriptArrayStaticMethod Purple
+highlight! link javascriptArrayMethod Purple
+highlight! link javascriptMathStaticMethod Purple
+highlight! link javascriptSubtleCryptoMethod Purple
+highlight! link javascriptCryptoMethod Purple
 highlight! link javascriptProp Fg
 highlight! link javascriptBOMWindowProp Fg
 highlight! link javascriptDOMStorageProp Fg
@@ -1554,7 +1554,7 @@ highlight! link javascriptMathStaticProp Fg
 " }}}
 " vim-jsx-pretty: https://github.com/maxmellon/vim-jsx-pretty{{{
 highlight! link jsxTagName RedItalic
-highlight! link jsxOpenPunct Green
+highlight! link jsxOpenPunct Red
 highlight! link jsxClosePunct Blue
 highlight! link jsxEscapeJs Purple
 highlight! link jsxAttrib Blue
@@ -1567,8 +1567,8 @@ highlight! link typescriptEndColons Fg
 highlight! link typescriptSource BlueItalic
 highlight! link typescriptMessage Green
 highlight! link typescriptGlobalObjects BlueItalic
-highlight! link typescriptInterpolation Purple
-highlight! link typescriptInterpolationDelimiter Purple
+highlight! link typescriptInterpolation Green
+highlight! link typescriptInterpolationDelimiter Green
 highlight! link typescriptBraces Fg
 highlight! link typescriptParens Fg
 " }}}
@@ -1610,8 +1610,8 @@ highlight! link typescriptTypeParameter BlueItalic
 highlight! link typescriptReadonlyModifier Red
 highlight! link typescriptAccessibilityModifier Red
 highlight! link typescriptAmbientDeclaration Red
-highlight! link typescriptTemplateSubstitution Purple
-highlight! link typescriptTemplateSB Purple
+highlight! link typescriptTemplateSubstitution Green
+highlight! link typescriptTemplateSB Green
 highlight! link typescriptExceptions Red
 highlight! link typescriptCastKeyword Red
 highlight! link typescriptOptionalMark Red
@@ -1633,57 +1633,57 @@ highlight! link typescriptGlobalJSONDot Grey
 highlight! link typescriptGlobalRegExpDot Grey
 highlight! link typescriptGlobalPromiseDot Grey
 highlight! link typescriptGlobalURLDot Grey
-highlight! link typescriptGlobalMethod Green
-highlight! link typescriptDOMStorageMethod Green
-highlight! link typescriptFileMethod Green
-highlight! link typescriptFileReaderMethod Green
-highlight! link typescriptFileListMethod Green
-highlight! link typescriptBlobMethod Green
-highlight! link typescriptURLStaticMethod Green
-highlight! link typescriptNumberStaticMethod Green
-highlight! link typescriptNumberMethod Green
-highlight! link typescriptDOMNodeMethod Green
-highlight! link typescriptPaymentMethod Green
-highlight! link typescriptPaymentResponseMethod Green
-highlight! link typescriptHeadersMethod Green
-highlight! link typescriptRequestMethod Green
-highlight! link typescriptResponseMethod Green
-highlight! link typescriptES6SetMethod Green
-highlight! link typescriptReflectMethod Green
-highlight! link typescriptBOMWindowMethod Green
-highlight! link typescriptGeolocationMethod Green
-highlight! link typescriptServiceWorkerMethod Green
-highlight! link typescriptCacheMethod Green
-highlight! link typescriptES6MapMethod Green
-highlight! link typescriptFunctionMethod Green
-highlight! link typescriptRegExpMethod Green
-highlight! link typescriptXHRMethod Green
-highlight! link typescriptBOMNavigatorMethod Green
-highlight! link typescriptServiceWorkerMethod Green
-highlight! link typescriptIntlMethod Green
-highlight! link typescriptDOMEventTargetMethod Green
-highlight! link typescriptDOMEventMethod Green
-highlight! link typescriptDOMDocMethod Green
-highlight! link typescriptStringStaticMethod Green
-highlight! link typescriptStringMethod Green
-highlight! link typescriptSymbolStaticMethod Green
-highlight! link typescriptObjectStaticMethod Green
-highlight! link typescriptObjectMethod Green
-highlight! link typescriptJSONStaticMethod Green
-highlight! link typescriptEncodingMethod Green
-highlight! link typescriptBOMLocationMethod Green
-highlight! link typescriptPromiseStaticMethod Green
-highlight! link typescriptPromiseMethod Green
-highlight! link typescriptSubtleCryptoMethod Green
-highlight! link typescriptCryptoMethod Green
-highlight! link typescriptBOMHistoryMethod Green
-highlight! link typescriptDOMFormMethod Green
-highlight! link typescriptConsoleMethod Green
-highlight! link typescriptDateStaticMethod Green
-highlight! link typescriptDateMethod Green
-highlight! link typescriptArrayStaticMethod Green
-highlight! link typescriptArrayMethod Green
-highlight! link typescriptMathStaticMethod Green
+highlight! link typescriptGlobalMethod Purple
+highlight! link typescriptDOMStorageMethod Purple
+highlight! link typescriptFileMethod Purple
+highlight! link typescriptFileReaderMethod Purple
+highlight! link typescriptFileListMethod Purple
+highlight! link typescriptBlobMethod Purple
+highlight! link typescriptURLStaticMethod Purple
+highlight! link typescriptNumberStaticMethod Purple
+highlight! link typescriptNumberMethod Purple
+highlight! link typescriptDOMNodeMethod Purple
+highlight! link typescriptPaymentMethod Purple
+highlight! link typescriptPaymentResponseMethod Purple
+highlight! link typescriptHeadersMethod Purple
+highlight! link typescriptRequestMethod Purple
+highlight! link typescriptResponseMethod Purple
+highlight! link typescriptES6SetMethod Purple
+highlight! link typescriptReflectMethod Purple
+highlight! link typescriptBOMWindowMethod Purple
+highlight! link typescriptGeolocationMethod Purple
+highlight! link typescriptServiceWorkerMethod Purple
+highlight! link typescriptCacheMethod Purple
+highlight! link typescriptES6MapMethod Purple
+highlight! link typescriptFunctionMethod Purple
+highlight! link typescriptRegExpMethod Purple
+highlight! link typescriptXHRMethod Purple
+highlight! link typescriptBOMNavigatorMethod Purple
+highlight! link typescriptServiceWorkerMethod Purple
+highlight! link typescriptIntlMethod Purple
+highlight! link typescriptDOMEventTargetMethod Purple
+highlight! link typescriptDOMEventMethod Purple
+highlight! link typescriptDOMDocMethod Purple
+highlight! link typescriptStringStaticMethod Purple
+highlight! link typescriptStringMethod Purple
+highlight! link typescriptSymbolStaticMethod Purple
+highlight! link typescriptObjectStaticMethod Purple
+highlight! link typescriptObjectMethod Purple
+highlight! link typescriptJSONStaticMethod Purple
+highlight! link typescriptEncodingMethod Purple
+highlight! link typescriptBOMLocationMethod Purple
+highlight! link typescriptPromiseStaticMethod Purple
+highlight! link typescriptPromiseMethod Purple
+highlight! link typescriptSubtleCryptoMethod Purple
+highlight! link typescriptCryptoMethod Purple
+highlight! link typescriptBOMHistoryMethod Purple
+highlight! link typescriptDOMFormMethod Purple
+highlight! link typescriptConsoleMethod Purple
+highlight! link typescriptDateStaticMethod Purple
+highlight! link typescriptDateMethod Purple
+highlight! link typescriptArrayStaticMethod Purple
+highlight! link typescriptArrayMethod Purple
+highlight! link typescriptMathStaticMethod Purple
 highlight! link typescriptStringProperty Fg
 highlight! link typescriptDOMStorageProp Fg
 highlight! link typescriptFileReaderProp Fg
@@ -1794,8 +1794,8 @@ highlight! link pythonExClass BlueItalic
 highlight! link pythonBuiltinType BlueItalic
 highlight! link pythonBuiltinObj OrangeItalic
 highlight! link pythonDottedName OrangeItalic
-highlight! link pythonBuiltinFunc Green
-highlight! link pythonFunction Green
+highlight! link pythonBuiltinFunc Purple
+highlight! link pythonFunction Purple
 highlight! link pythonDecorator OrangeItalic
 highlight! link pythonInclude Include
 highlight! link pythonImport PreProc
@@ -1825,23 +1825,23 @@ highlight! link semshiErrorChar RedSign
 " syn_end }}}
 " syn_begin: lua {{{
 " builtin: {{{
-highlight! link luaFunc Green
+highlight! link luaFunc Purple
 highlight! link luaFunction Red
 highlight! link luaTable Fg
 highlight! link luaIn Red
 " }}}
 " vim-lua: https://github.com/tbastos/vim-lua{{{
-highlight! link luaFuncCall Green
-highlight! link luaLocal Red
-highlight! link luaSpecialValue Green
+highlight! link luaFuncCall Red
+highlight! link luaLocal Green
+highlight! link luaSpecialValue Yellow
 highlight! link luaBraces Fg
 highlight! link luaBuiltIn BlueItalic
 highlight! link luaNoise Grey
-highlight! link luaLabel Purple
+highlight! link luaLabel Green
 highlight! link luaFuncTable BlueItalic
 highlight! link luaFuncArgName Fg
 highlight! link luaEllipsis Red
-highlight! link luaDocTag Green
+highlight! link luaDocTag Purple
 " }}}
 " syn_end }}}
 " syn_begin: java {{{
@@ -1888,14 +1888,14 @@ highlight! link goDeclType Red
 " polyglot: {{{
 highlight! link goPackage Red
 highlight! link goImport Red
-highlight! link goBuiltins Green
+highlight! link goBuiltins Purple
 highlight! link goPredefinedIdentifiers OrangeItalic
 highlight! link goVar Red
 " }}}
 " syn_end }}}
 " syn_begin: rust {{{
 " builtin: https://github.com/rust-lang/rust.vim{{{
-highlight! link rustStructure Red
+highlight! link rustStructure Green
 highlight! link rustIdentifier OrangeItalic
 highlight! link rustModPath BlueItalic
 highlight! link rustModPathSep Grey
@@ -1904,8 +1904,8 @@ highlight! link rustSuper OrangeItalic
 highlight! link rustDeriveTrait Purple
 highlight! link rustEnumVariant Purple
 highlight! link rustMacroVariable OrangeItalic
-highlight! link rustAssert Green
-highlight! link rustPanic Green
+highlight! link rustAssert Red
+highlight! link rustPanic Red
 highlight! link rustPubScopeCrate BlueItalic
 highlight! link rustAttribute Purple
 " }}}
@@ -1928,21 +1928,21 @@ highlight! link swiftStructure Red
 " builtin: https://jasonwoof.com/gitweb/?p=vim-syntax.git;a=blob;f=php.vim;hb=HEAD{{{
 highlight! link phpVarSelector Fg
 highlight! link phpIdentifier Fg
-highlight! link phpDefine Green
-highlight! link phpStructure Red
-highlight! link phpSpecialFunction Green
+highlight! link phpDefine Red
+highlight! link phpStructure Green
+highlight! link phpSpecialFunction Red
 highlight! link phpInterpSimpleCurly Purple
-highlight! link phpComparison Red
+highlight! link phpComparison Green
 highlight! link phpMethodsVar Fg
 highlight! link phpInterpVarname Fg
-highlight! link phpMemberSelector Red
-highlight! link phpLabel Red
+highlight! link phpMemberSelector Green
+highlight! link phpLabel Green
 " }}}
 " php.vim: https://github.com/StanAngeloff/php.vim{{{
 highlight! link phpParent Fg
 highlight! link phpNowDoc Yellow
-highlight! link phpFunction Green
-highlight! link phpMethod Green
+highlight! link phpFunction Purple
+highlight! link phpMethod Purple
 highlight! link phpClass BlueItalic
 highlight! link phpSuperglobals BlueItalic
 highlight! link phpNullValue OrangeItalic
@@ -1981,10 +1981,10 @@ highlight! link perlStatementInclude Red
 highlight! link perlStatementStorage Red
 highlight! link perlStatementList Red
 highlight! link perlMatchStartEnd Red
-highlight! link perlVarSimpleMemberName Green
+highlight! link perlVarSimpleMemberName Purple
 highlight! link perlVarSimpleMember Fg
-highlight! link perlMethod Green
-highlight! link podVerbatimLine Green
+highlight! link perlMethod Purple
+highlight! link podVerbatimLine Purple
 highlight! link podCmdText Yellow
 highlight! link perlVarPlain Fg
 highlight! link perlVarPlain2 Fg
@@ -1996,8 +1996,8 @@ highlight! link ocamlArrow Red
 highlight! link ocamlEqual Red
 highlight! link ocamlOperator Red
 highlight! link ocamlKeyChar Red
-highlight! link ocamlModPath Green
-highlight! link ocamlFullMod Green
+highlight! link ocamlModPath Purple
+highlight! link ocamlFullMod Purple
 highlight! link ocamlModule BlueItalic
 highlight! link ocamlConstructor Orange
 highlight! link ocamlModParam Fg
@@ -2013,10 +2013,10 @@ highlight! link ocamlModParam1 Fg
 " builtin: https://github.com/vim-erlang/vim-erlang-runtime{{{
 highlight! link erlangAtom Fg
 highlight! link erlangVariable Fg
-highlight! link erlangLocalFuncRef Green
-highlight! link erlangLocalFuncCall Green
-highlight! link erlangGlobalFuncRef Green
-highlight! link erlangGlobalFuncCall Green
+highlight! link erlangLocalFuncRef Purple
+highlight! link erlangLocalFuncCall Purple
+highlight! link erlangGlobalFuncRef Purple
+highlight! link erlangGlobalFuncCall Purple
 highlight! link erlangAttribute BlueItalic
 highlight! link erlangPipe Red
 " }}}
@@ -2053,13 +2053,13 @@ highlight! link elixirExUnitMacro Red
 " builtin: http://www.drchip.org/astronaut/vim/index.html#SYNTAX_LISP{{{
 highlight! link lispAtomMark Purple
 highlight! link lispKey Orange
-highlight! link lispFunc Green
+highlight! link lispFunc Red
 " }}}
 " syn_end }}}
 " syn_begin: clojure {{{
 " builtin: https://github.com/guns/vim-clojure-static{{{
-highlight! link clojureMacro Red
-highlight! link clojureFunc Green
+highlight! link clojureMacro Green
+highlight! link clojureFunc Red
 highlight! link clojureConstant OrangeItalic
 highlight! link clojureSpecial Red
 highlight! link clojureDefine Red
@@ -2073,9 +2073,9 @@ highlight! link clojureDeref Purple
 " builtin: {{{
 highlight! link matlabSemicolon Fg
 highlight! link matlabFunction RedItalic
-highlight! link matlabImplicit Green
+highlight! link matlabImplicit Purple
 highlight! link matlabDelimiter Fg
-highlight! link matlabOperator Green
+highlight! link matlabOperator Purple
 highlight! link matlabArithmeticOperator Red
 highlight! link matlabArithmeticOperator Red
 highlight! link matlabRelationalOperator Red
@@ -2095,7 +2095,7 @@ highlight! link octaveVarKeyword BlueItalic
 " syn_begin: sh/zsh {{{
 " builtin: http://www.drchip.org/astronaut/vim/index.html#SYNTAX_SH{{{
 highlight! link shRange Fg
-highlight! link shOption Purple
+highlight! link shOption Green
 highlight! link shQuote Yellow
 highlight! link shVariable BlueItalic
 highlight! link shDerefSimple BlueItalic
@@ -2103,7 +2103,7 @@ highlight! link shDerefVar BlueItalic
 highlight! link shDerefSpecial BlueItalic
 highlight! link shDerefOff BlueItalic
 highlight! link shVarAssign Red
-highlight! link shFunctionOne Green
+highlight! link shFunctionOne Purple
 highlight! link shFunctionKey Red
 " }}}
 " syn_end }}}
@@ -2111,33 +2111,33 @@ highlight! link shFunctionKey Red
 " builtin: https://github.com/chrisbra/vim-zsh{{{
 highlight! link zshOption BlueItalic
 highlight! link zshSubst Orange
-highlight! link zshFunction Green
+highlight! link zshFunction Red
 " }}}
 " syn_end }}}
 " syn_begin: ps1 {{{
 " vim-ps1: https://github.com/PProvost/vim-ps1{{{
-highlight! link ps1FunctionInvocation Green
-highlight! link ps1FunctionDeclaration Green
+highlight! link ps1FunctionInvocation Red
+highlight! link ps1FunctionDeclaration Red
 highlight! link ps1InterpolationDelimiter Purple
 highlight! link ps1BuiltIn BlueItalic
 " }}}
 " syn_end }}}
 " syn_begin: vim {{{
 call amora#highlight('vimCommentTitle', s:palette.grey, s:palette.none, 'bold')
-highlight! link vimLet Red
-highlight! link vimFunction Green
+highlight! link vimLet Green
+highlight! link vimFunction Red
 highlight! link vimIsCommand Fg
-highlight! link vimUserFunc Green
-highlight! link vimFuncName Green
+highlight! link vimUserFunc Red
+highlight! link vimFuncName Red
 highlight! link vimMap BlueItalic
 highlight! link vimNotation Purple
-highlight! link vimMapLhs Green
-highlight! link vimMapRhs Green
+highlight! link vimMapLhs Red
+highlight! link vimMapRhs Red
 highlight! link vimSetEqual BlueItalic
 highlight! link vimSetSep Fg
 highlight! link vimOption BlueItalic
 highlight! link vimUserAttrbKey BlueItalic
-highlight! link vimUserAttrb Green
+highlight! link vimUserAttrb Red
 highlight! link vimAutoCmdSfxList Orange
 highlight! link vimSynType Orange
 highlight! link vimHiBang Orange
@@ -2154,107 +2154,107 @@ highlight! link makeCommands Red
 highlight! link cmakeCommand Red
 highlight! link cmakeKWconfigure_package_config_file BlueItalic
 highlight! link cmakeKWwrite_basic_package_version_file BlueItalic
-highlight! link cmakeKWExternalProject Green
-highlight! link cmakeKWadd_compile_definitions Green
-highlight! link cmakeKWadd_compile_options Green
-highlight! link cmakeKWadd_custom_command Green
-highlight! link cmakeKWadd_custom_target Green
-highlight! link cmakeKWadd_definitions Green
-highlight! link cmakeKWadd_dependencies Green
-highlight! link cmakeKWadd_executable Green
-highlight! link cmakeKWadd_library Green
-highlight! link cmakeKWadd_link_options Green
-highlight! link cmakeKWadd_subdirectory Green
-highlight! link cmakeKWadd_test Green
-highlight! link cmakeKWbuild_command Green
-highlight! link cmakeKWcmake_host_system_information Green
-highlight! link cmakeKWcmake_minimum_required Green
-highlight! link cmakeKWcmake_parse_arguments Green
-highlight! link cmakeKWcmake_policy Green
-highlight! link cmakeKWconfigure_file Green
-highlight! link cmakeKWcreate_test_sourcelist Green
-highlight! link cmakeKWctest_build Green
-highlight! link cmakeKWctest_configure Green
-highlight! link cmakeKWctest_coverage Green
-highlight! link cmakeKWctest_memcheck Green
-highlight! link cmakeKWctest_run_script Green
-highlight! link cmakeKWctest_start Green
-highlight! link cmakeKWctest_submit Green
-highlight! link cmakeKWctest_test Green
-highlight! link cmakeKWctest_update Green
-highlight! link cmakeKWctest_upload Green
-highlight! link cmakeKWdefine_property Green
-highlight! link cmakeKWdoxygen_add_docs Green
-highlight! link cmakeKWenable_language Green
-highlight! link cmakeKWenable_testing Green
-highlight! link cmakeKWexec_program Green
-highlight! link cmakeKWexecute_process Green
-highlight! link cmakeKWexport Green
-highlight! link cmakeKWexport_library_dependencies Green
-highlight! link cmakeKWfile Green
-highlight! link cmakeKWfind_file Green
-highlight! link cmakeKWfind_library Green
-highlight! link cmakeKWfind_package Green
-highlight! link cmakeKWfind_path Green
-highlight! link cmakeKWfind_program Green
-highlight! link cmakeKWfltk_wrap_ui Green
-highlight! link cmakeKWforeach Green
-highlight! link cmakeKWfunction Green
-highlight! link cmakeKWget_cmake_property Green
-highlight! link cmakeKWget_directory_property Green
-highlight! link cmakeKWget_filename_component Green
-highlight! link cmakeKWget_property Green
-highlight! link cmakeKWget_source_file_property Green
-highlight! link cmakeKWget_target_property Green
-highlight! link cmakeKWget_test_property Green
-highlight! link cmakeKWif Green
-highlight! link cmakeKWinclude Green
-highlight! link cmakeKWinclude_directories Green
-highlight! link cmakeKWinclude_external_msproject Green
-highlight! link cmakeKWinclude_guard Green
-highlight! link cmakeKWinstall Green
-highlight! link cmakeKWinstall_files Green
-highlight! link cmakeKWinstall_programs Green
-highlight! link cmakeKWinstall_targets Green
-highlight! link cmakeKWlink_directories Green
-highlight! link cmakeKWlist Green
-highlight! link cmakeKWload_cache Green
-highlight! link cmakeKWload_command Green
-highlight! link cmakeKWmacro Green
-highlight! link cmakeKWmark_as_advanced Green
-highlight! link cmakeKWmath Green
-highlight! link cmakeKWmessage Green
-highlight! link cmakeKWoption Green
-highlight! link cmakeKWproject Green
-highlight! link cmakeKWqt_wrap_cpp Green
-highlight! link cmakeKWqt_wrap_ui Green
-highlight! link cmakeKWremove Green
-highlight! link cmakeKWseparate_arguments Green
-highlight! link cmakeKWset Green
-highlight! link cmakeKWset_directory_properties Green
-highlight! link cmakeKWset_property Green
-highlight! link cmakeKWset_source_files_properties Green
-highlight! link cmakeKWset_target_properties Green
-highlight! link cmakeKWset_tests_properties Green
-highlight! link cmakeKWsource_group Green
-highlight! link cmakeKWstring Green
-highlight! link cmakeKWsubdirs Green
-highlight! link cmakeKWtarget_compile_definitions Green
-highlight! link cmakeKWtarget_compile_features Green
-highlight! link cmakeKWtarget_compile_options Green
-highlight! link cmakeKWtarget_include_directories Green
-highlight! link cmakeKWtarget_link_directories Green
-highlight! link cmakeKWtarget_link_libraries Green
-highlight! link cmakeKWtarget_link_options Green
-highlight! link cmakeKWtarget_precompile_headers Green
-highlight! link cmakeKWtarget_sources Green
-highlight! link cmakeKWtry_compile Green
-highlight! link cmakeKWtry_run Green
-highlight! link cmakeKWunset Green
-highlight! link cmakeKWuse_mangled_mesa Green
-highlight! link cmakeKWvariable_requires Green
-highlight! link cmakeKWvariable_watch Green
-highlight! link cmakeKWwrite_file Green
+highlight! link cmakeKWExternalProject Purple
+highlight! link cmakeKWadd_compile_definitions Purple
+highlight! link cmakeKWadd_compile_options Purple
+highlight! link cmakeKWadd_custom_command Purple
+highlight! link cmakeKWadd_custom_target Purple
+highlight! link cmakeKWadd_definitions Purple
+highlight! link cmakeKWadd_dependencies Purple
+highlight! link cmakeKWadd_executable Purple
+highlight! link cmakeKWadd_library Purple
+highlight! link cmakeKWadd_link_options Purple
+highlight! link cmakeKWadd_subdirectory Purple
+highlight! link cmakeKWadd_test Purple
+highlight! link cmakeKWbuild_command Purple
+highlight! link cmakeKWcmake_host_system_information Purple
+highlight! link cmakeKWcmake_minimum_required Purple
+highlight! link cmakeKWcmake_parse_arguments Purple
+highlight! link cmakeKWcmake_policy Purple
+highlight! link cmakeKWconfigure_file Purple
+highlight! link cmakeKWcreate_test_sourcelist Purple
+highlight! link cmakeKWctest_build Purple
+highlight! link cmakeKWctest_configure Purple
+highlight! link cmakeKWctest_coverage Purple
+highlight! link cmakeKWctest_memcheck Purple
+highlight! link cmakeKWctest_run_script Purple
+highlight! link cmakeKWctest_start Purple
+highlight! link cmakeKWctest_submit Purple
+highlight! link cmakeKWctest_test Purple
+highlight! link cmakeKWctest_update Purple
+highlight! link cmakeKWctest_upload Purple
+highlight! link cmakeKWdefine_property Purple
+highlight! link cmakeKWdoxygen_add_docs Purple
+highlight! link cmakeKWenable_language Purple
+highlight! link cmakeKWenable_testing Purple
+highlight! link cmakeKWexec_program Purple
+highlight! link cmakeKWexecute_process Purple
+highlight! link cmakeKWexport Purple
+highlight! link cmakeKWexport_library_dependencies Purple
+highlight! link cmakeKWfile Purple
+highlight! link cmakeKWfind_file Purple
+highlight! link cmakeKWfind_library Purple
+highlight! link cmakeKWfind_package Purple
+highlight! link cmakeKWfind_path Purple
+highlight! link cmakeKWfind_program Purple
+highlight! link cmakeKWfltk_wrap_ui Purple
+highlight! link cmakeKWforeach Purple
+highlight! link cmakeKWfunction Purple
+highlight! link cmakeKWget_cmake_property Purple
+highlight! link cmakeKWget_directory_property Purple
+highlight! link cmakeKWget_filename_component Purple
+highlight! link cmakeKWget_property Purple
+highlight! link cmakeKWget_source_file_property Purple
+highlight! link cmakeKWget_target_property Purple
+highlight! link cmakeKWget_test_property Purple
+highlight! link cmakeKWif Purple
+highlight! link cmakeKWinclude Purple
+highlight! link cmakeKWinclude_directories Purple
+highlight! link cmakeKWinclude_external_msproject Purple
+highlight! link cmakeKWinclude_guard Purple
+highlight! link cmakeKWinstall Purple
+highlight! link cmakeKWinstall_files Purple
+highlight! link cmakeKWinstall_programs Purple
+highlight! link cmakeKWinstall_targets Purple
+highlight! link cmakeKWlink_directories Purple
+highlight! link cmakeKWlist Purple
+highlight! link cmakeKWload_cache Purple
+highlight! link cmakeKWload_command Purple
+highlight! link cmakeKWmacro Purple
+highlight! link cmakeKWmark_as_advanced Purple
+highlight! link cmakeKWmath Purple
+highlight! link cmakeKWmessage Purple
+highlight! link cmakeKWoption Purple
+highlight! link cmakeKWproject Purple
+highlight! link cmakeKWqt_wrap_cpp Purple
+highlight! link cmakeKWqt_wrap_ui Purple
+highlight! link cmakeKWremove Purple
+highlight! link cmakeKWseparate_arguments Purple
+highlight! link cmakeKWset Purple
+highlight! link cmakeKWset_directory_properties Purple
+highlight! link cmakeKWset_property Purple
+highlight! link cmakeKWset_source_files_properties Purple
+highlight! link cmakeKWset_target_properties Purple
+highlight! link cmakeKWset_tests_properties Purple
+highlight! link cmakeKWsource_group Purple
+highlight! link cmakeKWstring Purple
+highlight! link cmakeKWsubdirs Purple
+highlight! link cmakeKWtarget_compile_definitions Purple
+highlight! link cmakeKWtarget_compile_features Purple
+highlight! link cmakeKWtarget_compile_options Purple
+highlight! link cmakeKWtarget_include_directories Purple
+highlight! link cmakeKWtarget_link_directories Purple
+highlight! link cmakeKWtarget_link_libraries Purple
+highlight! link cmakeKWtarget_link_options Purple
+highlight! link cmakeKWtarget_precompile_headers Purple
+highlight! link cmakeKWtarget_sources Purple
+highlight! link cmakeKWtry_compile Purple
+highlight! link cmakeKWtry_run Purple
+highlight! link cmakeKWunset Purple
+highlight! link cmakeKWuse_mangled_mesa Purple
+highlight! link cmakeKWvariable_requires Purple
+highlight! link cmakeKWvariable_watch Purple
+highlight! link cmakeKWwrite_file Purple
 " syn_end }}}
 " syn_begin: json {{{
 highlight! link jsonKeyword Red
@@ -2284,13 +2284,13 @@ highlight! link gitcommitSelected Grey
 highlight! link gitcommitUnmerged Grey
 highlight! link gitcommitOnBranch Grey
 highlight! link gitcommitArrow Grey
-highlight! link gitcommitFile Green
+highlight! link gitcommitFile Purple
 " syn_end }}}
 " syn_begin: dosini {{{
 call amora#highlight('dosiniHeader', s:palette.red, s:palette.none, 'bold')
 highlight! link dosiniLabel Blue
-highlight! link dosiniValue Green
-highlight! link dosiniNumber Green
+highlight! link dosiniValue Red
+highlight! link dosiniNumber Red
 " syn_end }}}
 " syn_begin: help {{{
 call amora#highlight('helpNote', s:palette.purple, s:palette.none, 'bold')
@@ -2300,7 +2300,7 @@ call amora#highlight('helpURL', s:palette.green, s:palette.none, 'underline')
 call amora#highlight('helpHyperTextEntry', s:palette.blue, s:palette.none, 'bold')
 highlight! link helpHyperTextJump Blue
 highlight! link helpCommand Yellow
-highlight! link helpExample Green
+highlight! link helpExample Red
 highlight! link helpSpecial Purple
 highlight! link helpSectionDelim Grey
 " syn_end }}}
